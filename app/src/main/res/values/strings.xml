@@ -1,3 +1,15 @@
 <resources>
-    <string name="app_name">WiproRegistrationApp</string>
+    <string name="app_name">Registration Demo</string>
+    <string name="first_name_hint">First Name</string>
+    <string name="last_name_hint">Last Name</string>
+    <string name="email_hint">Email</string>
+    <string name="register_button">REGISTER</string>
+    <string name="text_view_dob">Date of Birth:</string>
+    <string name="text_view_gender">Gender:</string>
+    <string name="radio_button_female">Female</string>
+    <string name="radio_button_male">Male</string>
+    <string name="address_one_hint">Address 1</string>
+    <string name="address_two_hint">Address 2</string>
+    <string name="address_three_hint">County</string>
+    <string name="address_four_hint">Eircode</string>
 </resources>
