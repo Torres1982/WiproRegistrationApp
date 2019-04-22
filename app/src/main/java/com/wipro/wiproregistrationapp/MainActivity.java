@@ -41,14 +41,13 @@ public class MainActivity extends AppCompatActivity {
         Button buttonRegistration = findViewById(R.id.button_register);
         message = "from MAIN Activity!";
 
-        Log.i("TAG_ACTIVITY_LIFE_CYCLE","ON CREATE " + message);
-
         buttonRegistration.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 checkWidgetsValidation();
             }
         });
+        Log.i("TAG_ACTIVITY_LIFE_CYCLE","ON CREATE " + message);
     }
 
     // Validate all the user inputs
@@ -69,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
             showDialogMessage("Provide a correct Eircode, please!");
         } else {
             Button selectedRadioButton = (RadioButton)findViewById(radioGroupSelectedRadioButtonId);
-            //showDialogMessage("Successful Validation performed!"); // Add fragment with confirmation
+
             Log.i("TEST", String.valueOf("*********************\nName: " + editTextFirstName.getText() + " " + editTextLastName.getText() +
                                              "\nEmail: " + editTextEmail.getText() + "\nGender: " + selectedRadioButton.getText().toString() +
                                              "\nDate of Birth: " + datePickerBirth.getDayOfMonth() + "-" + datePickerBirth.getMonth() + "-" + datePickerBirth.getYear() +

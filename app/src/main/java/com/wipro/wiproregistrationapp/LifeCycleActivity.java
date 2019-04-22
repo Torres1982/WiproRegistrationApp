@@ -17,7 +17,6 @@ public class LifeCycleActivity extends AppCompatActivity {
 
         message = "from SECOND Activity!";
         Button backToFirstActivityButton = findViewById(R.id.button_second_activity);
-        Log.i("TAG_ACTIVITY_LIFE_CYCLE","ON CREATE " + message);
 
         backToFirstActivityButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -26,6 +25,7 @@ public class LifeCycleActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        Log.i("TAG_ACTIVITY_LIFE_CYCLE","ON CREATE " + message);
     }
 
     @Override
