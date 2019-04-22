@@ -1,5 +1,6 @@
 package com.wipro.wiproregistrationapp;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -21,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
     private EditText editTextAddressTwo;
     private EditText editTextCounty;
     private EditText editTextEircode;
+    private String message;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +39,9 @@ public class MainActivity extends AppCompatActivity {
         editTextCounty = findViewById(R.id.edit_text_county);
         editTextEircode = findViewById(R.id.edit_text_eircode);
         Button buttonRegistration = findViewById(R.id.button_register);
+        message = "from MAIN Activity!";
+
+        Log.i("TAG_ACTIVITY_LIFE_CYCLE","ON CREATE " + message);
 
         buttonRegistration.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -64,17 +69,50 @@ public class MainActivity extends AppCompatActivity {
             showDialogMessage("Provide a correct Eircode, please!");
         } else {
             Button selectedRadioButton = (RadioButton)findViewById(radioGroupSelectedRadioButtonId);
-            showDialogMessage("Successful Validation performed!"); // Add fragment with confirmation
+            //showDialogMessage("Successful Validation performed!"); // Add fragment with confirmation
             Log.i("TEST", String.valueOf("*********************\nName: " + editTextFirstName.getText() + " " + editTextLastName.getText() +
                                              "\nEmail: " + editTextEmail.getText() + "\nGender: " + selectedRadioButton.getText().toString() +
                                              "\nDate of Birth: " + datePickerBirth.getDayOfMonth() + "-" + datePickerBirth.getMonth() + "-" + datePickerBirth.getYear() +
                                              "\nAddress: " + editTextAddressOne.getText().toString() + ", " + editTextAddressTwo.getText().toString() +
                                              "\nCounty: " + editTextCounty.getText().toString() + "\nEircode: " + editTextEircode.getText().toString()));
+
+            Intent intent = new Intent(MainActivity.this, LifeCycleActivity.class);
+            startActivity(intent);
         }
     }
 
     // Display the Dialog Box message
     private void showDialogMessage(String message) {
         Toast.makeText(this.getApplicationContext(), message, Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        Log.i("TAG_ACTIVITY_LIFE_CYCLE","ON START " + message);
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        Log.i("TAG_ACTIVITY_LIFE_CYCLE", "ON PAUSE " + message);
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Log.i("TAG_ACTIVITY_LIFE_CYCLE", "ON RESUME " + message);
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        Log.i("TAG_ACTIVITY_LIFE_CYCLE", "ON STOP " + message);
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        Log.i("TAG_ACTIVITY_LIFE_CYCLE", "ON DESTROY " + message);
     }
 }

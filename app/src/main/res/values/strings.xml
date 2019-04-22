@@ -12,4 +12,6 @@
     <string name="address_two_hint">Address 2</string>
     <string name="address_three_hint">County</string>
     <string name="address_four_hint">Eircode</string>
+    <string name="text_view_life_cycle">Second Life Cycle Activity</string>
+    <string name="button_second_activity">Back to First Activity</string>
 </resources>
