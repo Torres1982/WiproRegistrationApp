@@ -76,7 +76,12 @@ public class ValidationUtilityTest {
     public void eircodeValidationCorrectEircodeReturnTrue() {
         assertTrue(ValidationUtility.isEircodeValidFormat("D08X2A5"));
     }
-
+    
+    @Test
+    public void eircodeValidationCorrectEircodeForD6WRegionReturnTrue() {
+        assertTrue(ValidationUtility.isEircodeValidFormat("D6WA5F7"));
+    }
+    
     @Test
     public void eircodeValidationIncorrectEircodeNonLetterOrNonDigitCharactersReturnFalse() {
         assertFalse(ValidationUtility.isEircodeValidFormat("_RE45+-/>"));
@@ -85,5 +90,25 @@ public class ValidationUtilityTest {
     @Test
     public void eircodeValidatorIncorrectEircodeEmptyValueReturnFalse() {
         assertFalse(ValidationUtility.isEircodeValidFormat(""));
+    }
+    
+    @Test
+    public void eircodeValidationIncorrectEircodeNonAllowedLetterCharactersReturnFalse() {
+        assertFalse(ValidationUtility.isEircodeValidFormat("D22G5L1"));
+    }
+    
+    @Test
+    public void eircodeValidationIncorrectEircodeNonNumericCharactersProvidedReturnFalse() {
+        assertFalse(ValidationUtility.isEircodeValidFormat("ACHKPRT"));
+    }
+    
+    @Test
+    public void eircodeValidationIncorrectEircodeNonLetterCharactersProvidedReturnFalse() {
+        assertFalse(ValidationUtility.isEircodeValidFormat("1745365"));
+    }
+    
+    @Test
+    public void eircodeValidationIncorrectEircodeLowerCaseLettersIncludedReturnFalse() {
+        assertFalse(ValidationUtility.isEircodeValidFormat("d08x2a5"));
     }
 }
