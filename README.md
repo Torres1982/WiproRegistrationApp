@@ -12,7 +12,15 @@ Please add validations to all field and on button click print all parameters - (
 ### Future improvements based on the feedback:
 
 A) First review/feedback (18th April 2019):
-1. Replace the Linear Layout with Constraint Layout.
-2. Move the validation methods to a Validation Utility Class.
-3. Add Second Activity and Activility Life Cycle overriden methods with log messages.
-4. Write Unit Tests for validation methods.
+1. Replace the Linear Layout with Constraint Layout.                                  UPDATED
+2. Move the validation methods to a Validation Utility Class.                         UPDATED
+3. Add Second Activity and Activility Life Cycle overriden methods with log messages. UPDATED
+4. Write Unit Tests for validation methods.                                           UPDATED
+
+### Updated Theory Questions:
+1. Why do Android have multiple build.gradle files?                                   ANSWERED
+2. The difference between a Simulator and Emulator in Android?                        ANSWERED
+3. Accessing static and non-static methods.                                           ANSWERED
+4. What is a Group Views in Constraint Layout?                                        ANSWERED
+5. Does the Android device store all of the mipmap icons (all different resolutions)
+   or it only keeps the ones that it supports?                                        ANSWERED
