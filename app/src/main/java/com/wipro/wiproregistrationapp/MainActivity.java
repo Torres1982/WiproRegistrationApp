@@ -12,6 +12,8 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
+import java.util.Date;
+
 public class MainActivity extends AppCompatActivity {
     private EditText editTextFirstName;
     private EditText editTextLastName;
@@ -53,14 +55,20 @@ public class MainActivity extends AppCompatActivity {
     // Validate all the user inputs
     private void checkWidgetsValidation() {
         int radioGroupSelectedRadioButtonId = radioGroupGender.getCheckedRadioButtonId();
+        int year = datePickerBirth.getYear();
+        int month = datePickerBirth.getMonth() + 1;
+        int day = datePickerBirth.getDayOfMonth();
+        Date selectedDate = DateTimeUtility.convertStringToDate(day, month, year);
 
         if (editTextFirstName.length() < 2 || editTextLastName.length() < 2) {
             showDialogMessage("Provide your Name, please!");
         } else if (!ValidationUtility.isEmailValidFormat(editTextEmail.getText().toString())) {
             showDialogMessage("Provide a Valid Format Email, please!");
+        } else if (!ValidationUtility.isAgeOverEighteen(selectedDate)) {
+            showDialogMessage("You must be over 18 years old to register!");
         } else if (radioGroupSelectedRadioButtonId == -1) {
             showDialogMessage("Select your Gender, please!");
-        } else if (editTextAddressOne.length() < 5 || editTextAddressTwo.length() < 5) {
+        }  else if (editTextAddressOne.length() < 5 || editTextAddressTwo.length() < 5) {
             showDialogMessage("Provide your Address, please!");
         } else if (editTextCounty.length() < 4 || (!ValidationUtility.isString(editTextCounty.getText().toString()))) {
             showDialogMessage("Provide the County, please!");
