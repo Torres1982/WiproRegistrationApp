@@ -16,6 +16,8 @@ A) First review/feedback (18th April 2019):
 2. Move the validation methods to a Validation Utility Class.                         UPDATED
 3. Add Second Activity and Activility Life Cycle overriden methods with log messages. UPDATED
 4. Write Unit Tests for validation methods.                                           UPDATED
+5. Improve the eircode validation.
+6. Add a validation for date of birth (assume, greater than 18).
 
 ### Updated Theory Questions:
 1. Why do Android have multiple build.gradle files?                                   ANSWERED
