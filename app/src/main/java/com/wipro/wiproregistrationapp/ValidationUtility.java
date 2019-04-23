@@ -17,8 +17,8 @@ public class ValidationUtility {
     }
 
     // Eircode format validation (simple)
-    public static boolean isEircodeValidFormat(String eircode) {
-        String stringEircodeRegularExpression = "^[a-zA-Z0-9]+$";
+    static boolean isEircodeValidFormat(String eircode) {
+        String stringEircodeRegularExpression = "^([AC-FHKNPRTV-Y]\\d{2}|D6W)[0-9AC-FHKNPRTV-Y]{4}+$";
         return eircode.matches(stringEircodeRegularExpression);
     }
 }
