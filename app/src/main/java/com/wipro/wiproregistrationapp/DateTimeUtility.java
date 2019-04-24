@@ -16,7 +16,7 @@ class DateTimeUtility {
             DateFormat df = new SimpleDateFormat("dd-MM-yyyy", Locale.ENGLISH);
             selectedDate = df.parse(dateString);
         } catch (Exception e) {
-            Log.i("DATE_PARSE_EXCEPTION_TAG", "**************** Exception Date Parser ******************* " + selectedDate);
+            Log.i("DATE_PARSE_EXCEPTION_TAG", "**************** Exception Date Parser *****************");
         }
         return selectedDate;
     }

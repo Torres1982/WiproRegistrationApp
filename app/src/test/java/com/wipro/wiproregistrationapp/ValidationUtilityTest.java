@@ -1,7 +1,15 @@
 package com.wipro.wiproregistrationapp;
 
 import org.junit.Test;
+
+import java.util.Calendar;
+import java.util.Date;
+import java.util.GregorianCalendar;
+
 import static org.junit.Assert.*;
+import static java.util.Calendar.DATE;
+import static java.util.Calendar.MONTH;
+import static java.util.Calendar.YEAR;
 
 public class ValidationUtilityTest {
     // ******************************** EMAIL VALIDATION *******************************************
@@ -110,5 +118,22 @@ public class ValidationUtilityTest {
     @Test
     public void eircodeValidationIncorrectEircodeLowerCaseLettersIncludedReturnFalse() {
         assertFalse(ValidationUtility.isEircodeValidFormat("d08x2a5"));
+    }
+
+    // ********************************** AGE VALIDATION *******************************************
+    @Test
+    public void ageValidationCorrectAgeOverEighteenReturnTrue() {
+        // Converting Gregorian Calendar to Date with usage of getTime()
+        assertTrue(ValidationUtility.isAgeOverEighteen((new GregorianCalendar(2001, 2, 27, 0, 0, 0)).getTime()));
+    }
+
+    @Test
+    public void ageValidationIncorrectAgeUnderEighteenReturnFalse() {
+        assertFalse(ValidationUtility.isAgeOverEighteen((new GregorianCalendar(2010, 5, 27, 0, 0, 0)).getTime()));
+    }
+
+    @Test
+    public void ageValidationIncorrectAgeUnderEighteenTodayDateReturnFalse() {
+        assertFalse(ValidationUtility.isAgeOverEighteen(new Date()));
     }
 }
