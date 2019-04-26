@@ -25,36 +25,42 @@ public class LifeCycleActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        Log.i("TAG_ACTIVITY_LIFE_CYCLE","ON CREATE " + message);
+        Log.d("TAG_ACTIVITY_LIFE_CYCLE","ON CREATE " + message);
     }
 
     @Override
     protected void onStart() {
         super.onStart();
-        Log.i("TAG_ACTIVITY_LIFE_CYCLE","ON START " + message);
+        Log.d("TAG_ACTIVITY_LIFE_CYCLE","ON START " + message);
+    }
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        Log.d("TAG_ACTIVITY_LIFE_CYCLE","ON RESTART " + message);
     }
 
     @Override
     protected void onPause() {
         super.onPause();
-        Log.i("TAG_ACTIVITY_LIFE_CYCLE", "ON PAUSE " + message);
+        Log.d("TAG_ACTIVITY_LIFE_CYCLE", "ON PAUSE " + message);
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-        Log.i("TAG_ACTIVITY_LIFE_CYCLE", "ON RESUME " + message);
+        Log.d("TAG_ACTIVITY_LIFE_CYCLE", "ON RESUME " + message);
     }
 
     @Override
     protected void onStop() {
         super.onStop();
-        Log.i("TAG_ACTIVITY_LIFE_CYCLE", "ON STOP " + message);
+        Log.d("TAG_ACTIVITY_LIFE_CYCLE", "ON STOP " + message);
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        Log.i("TAG_ACTIVITY_LIFE_CYCLE", "ON DESTROY " + message);
+        Log.d("TAG_ACTIVITY_LIFE_CYCLE", "ON DESTROY " + message);
     }
 }
