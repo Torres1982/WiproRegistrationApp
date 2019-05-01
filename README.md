@@ -29,8 +29,8 @@ Theory Questions:
    or it only keeps the ones that it supports?                                        ANSWERED
    
 #### B) Second review/feedback (26th April 2019):
-1. Remove hard-coded dimensions in xml file and replace them with the usage of *dimens.xml* resource file.
-2. Remove fixed measurements from layout heights and widths. Use *match_parent*, *wrap_content*, etc.
+1. Remove hard-coded dimensions in xml file and replace them with the usage of *dimens.xml* resource file. UPDATED
+2. Remove fixed measurements from layout heights and widths. Use *match_parent*, *wrap_content*, etc. UPDATED
 
 Theory Questions:
 1. Why do we need *dimens.xml* resource file?                                          ANSWERED
