@@ -9,10 +9,11 @@
 
     <EditText
         android:id="@+id/edit_text_first_name"
-        android:layout_width="0dp"
+        android:layout_width="@dimen/zero_layout_width_chain"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/eight_margin"
         android:hint="@string/first_name_hint"
+        android:importantForAutofill="no"
         android:inputType="text"
         app:layout_constraintHorizontal_chainStyle="spread"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -21,14 +22,15 @@
 
     <EditText
         android:id="@+id/edit_text_last_name"
-        android:layout_width="0dp"
+        android:layout_width="@dimen/zero_layout_width_chain"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="@dimen/eight_margin"
         android:layout_marginStart="@dimen/eight_margin"
+        android:layout_marginEnd="@dimen/eight_margin"
         android:hint="@string/last_name_hint"
+        android:importantForAutofill="no"
         android:inputType="text"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/edit_text_first_name"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -36,10 +38,11 @@
         android:id="@+id/edit_text_email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="@dimen/eight_margin"
         android:layout_marginStart="@dimen/eight_margin"
         android:layout_marginTop="@dimen/fifty_margin"
+        android:layout_marginEnd="@dimen/eight_margin"
         android:hint="@string/email_hint"
+        android:importantForAutofill="no"
         android:inputType="textEmailAddress"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -61,8 +64,8 @@
         android:id="@+id/date_picker"
         android:layout_width="match_parent"
         android:layout_height="@dimen/one_hundred_thirty_margin"
-        android:layout_marginEnd="@dimen/eight_margin"
         android:layout_marginStart="@dimen/eight_margin"
+        android:layout_marginEnd="@dimen/eight_margin"
         android:calendarViewShown="false"
         android:datePickerMode="spinner"
         android:endYear="2019"
@@ -91,6 +94,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/thirty_margin"
         android:orientation="horizontal"
+        android:gravity="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@id/text_view_gender_label">
@@ -99,8 +103,7 @@
             android:id="@+id/radio_button_female"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="@dimen/fifteen_margin"
-            android:layout_marginStart="@dimen/one_hundred_ten_margin"
+            android:layout_marginEnd="@dimen/thirty_margin"
             android:text="@string/radio_button_female" />
 
         <RadioButton
@@ -112,52 +115,60 @@
 
     <EditText
         android:id="@+id/edit_text_address_one"
-        android:layout_width="wrap_content"
+        android:layout_width="@dimen/zero_layout_width_chain"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/eight_margin"
         android:layout_marginTop="@dimen/thirty_margin"
         android:hint="@string/address_one_hint"
+        android:importantForAutofill="no"
         android:inputType="text"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintRight_toLeftOf="@+id/edit_text_address_two"
+        app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="@id/radio_group_gender" />
 
     <EditText
         android:id="@+id/edit_text_address_two"
-        android:layout_width="wrap_content"
+        android:layout_width="@dimen/zero_layout_width_chain"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="@dimen/eight_margin"
         android:layout_marginStart="@dimen/eight_margin"
         android:layout_marginTop="@dimen/thirty_margin"
+        android:layout_marginEnd="@dimen/eight_margin"
         android:hint="@string/address_two_hint"
+        android:importantForAutofill="no"
         android:inputType="text"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.98"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/edit_text_address_one"
         app:layout_constraintTop_toTopOf="@id/radio_group_gender" />
 
     <EditText
         android:id="@+id/edit_text_county"
-        android:layout_width="wrap_content"
+        android:layout_width="@dimen/zero_layout_width_chain"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/eight_margin"
         android:layout_marginTop="@dimen/fifty_margin"
         android:hint="@string/address_three_hint"
+        android:importantForAutofill="no"
         android:inputType="text"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintRight_toLeftOf="@id/edit_text_eircode"
+        app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="@id/edit_text_address_one" />
 
     <EditText
         android:id="@+id/edit_text_eircode"
-        android:layout_width="wrap_content"
+        android:layout_width="@dimen/zero_layout_width_chain"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="@dimen/eight_margin"
         android:layout_marginStart="@dimen/eight_margin"
         android:layout_marginTop="@dimen/fifty_margin"
+        android:layout_marginEnd="@dimen/eight_margin"
         android:hint="@string/address_four_hint"
+        android:importantForAutofill="no"
         android:inputType="text"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.98"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@id/edit_text_county"
         app:layout_constraintTop_toTopOf="@id/edit_text_address_two" />
 
     <Button

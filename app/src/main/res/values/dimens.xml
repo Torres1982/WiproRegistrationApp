@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <dimen name="zero_layout_width_chain">0dp</dimen>
     <dimen name="eight_margin">8dp</dimen>
-    <dimen name="fifteen_margin">15dp</dimen>
     <dimen name="thirty_margin">30dp</dimen>
     <dimen name="fifty_margin">50dp</dimen>
     <dimen name="sixty_margin">60dp</dimen>
-    <dimen name="one_hundred_ten_margin">110dp</dimen>
     <dimen name="one_hundred_thirty_margin">130dp</dimen>
     <dimen name="eighteen_text_size">18sp</dimen>
 </resources>
