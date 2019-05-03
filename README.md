@@ -39,5 +39,5 @@ occupy the whole parent's width with each having equal width. *CHAINING* applied
 Theory Questions:
 1. Why do we need *dimens.xml* resource file?                                          ANSWERED
 2. Why do we need *Content Provider* if we can use own database?
-3. What is static, dynamic and local *Broadcast Receiver*?
-4. Types of *Services*, how to start a Service, and pass the data from Service to an Activity?
+3. What is static, dynamic and local *Broadcast Receiver*?                             ANSWERED
+4. Types of *Services*, how to start a Service, and pass the data from Service to an Activity?  ANSWERED
